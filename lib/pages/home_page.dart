@@ -39,7 +39,35 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
-      body: Container(),
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Container(
+            padding: const EdgeInsets.all(12.0),
+            color: Colors.grey.shade600,
+            width: 300,
+            height: 1000,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                const NavLogo(),
+                Botao(
+                  clique: () {},
+                  texto: 'Carrinho',
+                ),
+                Botao(
+                  clique: () {},
+                  texto: 'Carrinho',
+                ),
+                Botao(
+                  clique: () {},
+                  texto: 'Carrinho',
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
