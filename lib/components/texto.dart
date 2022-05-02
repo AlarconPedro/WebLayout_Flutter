@@ -21,7 +21,27 @@ class Texto {
     );
   }
 
-  static Widget textoCorpo() {
-    return Text('Cadastro');
+  static Widget textoCorpo({String? titulo}) {
+    return Text(
+      titulo!,
+      textAlign: TextAlign.center,
+      style: const TextStyle(fontSize: 28),
+    );
+  }
+
+  static Widget pesquisa() {
+    return const Padding(
+      padding: EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+      child: TextField(
+        textAlign: TextAlign.center,
+        decoration: InputDecoration(
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.all(
+              Radius.circular(8),
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }

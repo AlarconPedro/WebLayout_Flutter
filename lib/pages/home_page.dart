@@ -33,59 +33,78 @@ class _HomePageState extends State<HomePage> {
           Botao.botaoNav(clique: () {}, texto: 'Login'),
         ],
       ),
-      body: Row(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
+      body: Column(
         children: [
-          Container(
-            color: Colors.grey.shade600,
-            width: 270,
-            height: 600,
-            child: ListView(
-              children: [
-                Texto.textoBarraLateral(),
-                Botao.botaoBarraLateral(
-                  clique: () {},
-                  texto: 'Exemplo 1',
-                ),
-                Botao.botaoBarraLateral(
-                  clique: () {},
-                  texto: 'Exemplo 1',
-                ),
-                Botao.botaoBarraLateral(
-                  clique: () {},
-                  texto: 'Exemplo 1',
-                ),
-                Botao.botaoBarraLateral(
-                  clique: () {},
-                  texto: 'Exemplo 1',
-                ),
-                Botao.botaoBarraLateral(
-                  clique: () {},
-                  texto: 'Exemplo 1',
-                ),
-                Botao.botaoBarraLateral(
-                  clique: () {},
-                  texto: 'Exemplo 1',
-                ),
-                Botao.botaoBarraLateral(
-                  clique: () {},
-                  texto: 'Exemplo 1',
-                ),
-              ],
-            ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Texto.textoCorpo(titulo: 'Cadastro Modelo'),
+              Texto.pesquisa(),
+            ],
           ),
-          // Column(
-          //   crossAxisAlignment: CrossAxisAlignment.stretch,
-          //   mainAxisAlignment: MainAxisAlignment.center,
-          //   children: [
-          //     Row(
-          //       mainAxisAlignment: MainAxisAlignment.end,
-          //       children: [Texto.textoCorpo()],
-          //     ),
-          //   ],
-          // ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Texto.textoCorpo(titulo: 'Cadastro Modelo'),
+              Texto.pesquisa(),
+            ],
+          ),
         ],
       ),
+      backgroundColor: Colors.grey.shade200,
+      // body: Row(
+      //   crossAxisAlignment: CrossAxisAlignment.stretch,
+      //   children: [
+      //     Container(
+      //       color: Colors.grey.shade600,
+      //       width: 270,
+      //       height: 600,
+      //       child: ListView(
+      //         children: [
+      //           Texto.textoBarraLateral(),
+      //           Botao.botaoBarraLateral(
+      //             clique: () {},
+      //             texto: 'Exemplo 1',
+      //           ),
+      //           Botao.botaoBarraLateral(
+      //             clique: () {},
+      //             texto: 'Exemplo 1',
+      //           ),
+      //           Botao.botaoBarraLateral(
+      //             clique: () {},
+      //             texto: 'Exemplo 1',
+      //           ),
+      //           Botao.botaoBarraLateral(
+      //             clique: () {},
+      //             texto: 'Exemplo 1',
+      //           ),
+      //           Botao.botaoBarraLateral(
+      //             clique: () {},
+      //             texto: 'Exemplo 1',
+      //           ),
+      //           Botao.botaoBarraLateral(
+      //             clique: () {},
+      //             texto: 'Exemplo 1',
+      //           ),
+      //           Botao.botaoBarraLateral(
+      //             clique: () {},
+      //             texto: 'Exemplo 1',
+      //           ),
+      //         ],
+      //       ),
+      //     ),
+      //     Column(
+      //       crossAxisAlignment: CrossAxisAlignment.stretch,
+      //       mainAxisAlignment: MainAxisAlignment.center,
+      //       children: [
+      //         Row(
+      //           mainAxisAlignment: MainAxisAlignment.end,
+      //           children: [Texto.textoCorpo()],
+      //         ),
+      //       ],
+      //     ),
+      //   ],
+      // ),
     );
   }
 }
