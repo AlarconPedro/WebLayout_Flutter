@@ -15,57 +15,75 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Painel Modelo'),
+        leading: Imagem.logoNavBar(
+          imagem: 'images/Logo_horizontal.png',
+        ),
+        leadingWidth: 270,
+        // title: const Text('Omega Sistemas'),
         actions: [
-          const Padding(
-            padding: EdgeInsets.all(8.0),
-            child: NavLogo(),
+          Padding(
+            padding: const EdgeInsets.all(4.0),
+            child: Row(
+              children: [
+                Imagem.logo(imagem: 'images/Logo_icone.png'),
+                Texto.textoNavBar(),
+              ],
+            ),
           ),
-          Botao(
-            clique: () {},
-            texto: 'Sobre',
-          ),
-          Botao(
-            clique: () {},
-            texto: 'Galeria',
-          ),
-          Botao(
-            clique: () {},
-            texto: 'Carrinho',
-          ),
-          Botao(
-            clique: () {},
-            texto: 'Login',
-          ),
+          Botao.botaoNav(clique: () {}, texto: 'Login'),
         ],
       ),
       body: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Container(
-            padding: const EdgeInsets.all(12.0),
             color: Colors.grey.shade600,
-            width: 300,
-            height: 1000,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+            width: 270,
+            height: 600,
+            child: ListView(
               children: [
-                const NavLogo(),
-                Botao(
+                Texto.textoBarraLateral(),
+                Botao.botaoBarraLateral(
                   clique: () {},
-                  texto: 'Carrinho',
+                  texto: 'Exemplo 1',
                 ),
-                Botao(
+                Botao.botaoBarraLateral(
                   clique: () {},
-                  texto: 'Carrinho',
+                  texto: 'Exemplo 1',
                 ),
-                Botao(
+                Botao.botaoBarraLateral(
                   clique: () {},
-                  texto: 'Carrinho',
+                  texto: 'Exemplo 1',
+                ),
+                Botao.botaoBarraLateral(
+                  clique: () {},
+                  texto: 'Exemplo 1',
+                ),
+                Botao.botaoBarraLateral(
+                  clique: () {},
+                  texto: 'Exemplo 1',
+                ),
+                Botao.botaoBarraLateral(
+                  clique: () {},
+                  texto: 'Exemplo 1',
+                ),
+                Botao.botaoBarraLateral(
+                  clique: () {},
+                  texto: 'Exemplo 1',
                 ),
               ],
             ),
           ),
+          // Column(
+          //   crossAxisAlignment: CrossAxisAlignment.stretch,
+          //   mainAxisAlignment: MainAxisAlignment.center,
+          //   children: [
+          //     Row(
+          //       mainAxisAlignment: MainAxisAlignment.end,
+          //       children: [Texto.textoCorpo()],
+          //     ),
+          //   ],
+          // ),
         ],
       ),
     );

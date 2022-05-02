@@ -1,2 +1,3 @@
 export 'botao.dart';
-export 'logo.dart';
+export 'Imagem.dart';
+export 'texto.dart';
