@@ -11,8 +11,12 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  bool logado = false;
+
   @override
   Widget build(BuildContext context) {
+    var screenSize = MediaQuery.of(context).size;
+    bool colapse = false;
     return Scaffold(
       appBar: AppBar(
         leading: Imagem.logoNavBar(
@@ -30,81 +34,79 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
-          Botao.botaoNav(clique: () {}, texto: 'Login'),
+          Botao.botaoNav(
+            clique: () {},
+            texto: 'Login',
+          ),
         ],
       ),
-      body: Column(
+      body: Row(
         children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Texto.textoCorpo(titulo: 'Cadastro Modelo'),
-              Texto.pesquisa(),
-            ],
+          Expanded(
+            flex: 1,
+            child: Container(
+              width: screenSize.width / 2,
+              color: Colors.grey.shade900,
+              child: ListView(
+                children: [
+                  Texto.textoBarraLateral(),
+                  const NavbarCollapse(
+                    textTitle: 'Administração',
+                    menu1: 'Adm Geral',
+                    menu2: 'Adm Conta',
+                    menu3: 'Adm Empresas',
+                  ),
+                  const NavbarCollapse(
+                    textTitle: 'Cadastro',
+                    menu1: 'Clientes',
+                    menu2: 'Funcionários',
+                    menu3: '',
+                  ),
+                  const NavbarCollapse(
+                    textTitle: 'Relatórios',
+                    menu1: 'Vendas',
+                    menu2: 'Funcionários',
+                    menu3: 'Clientes',
+                    menu4: 'Produtos',
+                  ),
+                  const NavbarCollapse(
+                    textTitle: 'Produtos',
+                    menu1: 'Devolvidos',
+                    menu2: 'Vendidos',
+                    menu3: 'Comprados',
+                  ),
+                ],
+              ),
+            ),
           ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Texto.textoCorpo(titulo: 'Cadastro Modelo'),
-              Texto.pesquisa(),
-            ],
+          Expanded(
+            flex: 5,
+            child: Container(
+              color: Colors.grey.shade200,
+              padding: const EdgeInsets.all(8.0),
+            ),
           ),
+          // Expanded(
+          //   flex: 3,
+          //   child: Container(
+          //     color: Colors.grey.shade200,
+          //     child: Column(
+          //       children: [
+          //         Texto.textoCorpo(titulo: 'Buscar'),
+          //         Texto.pesquisa(),
+          //       ],
+          //     ),
+          //   ),
+          // ),
+          // Expanded(
+          //   flex: 1,
+          //   child: Container(
+          //     color: Colors.grey.shade200,
+          //     padding: const EdgeInsets.all(8.0),
+          //   ),
+          // ),
         ],
       ),
-      backgroundColor: Colors.grey.shade200,
-      // body: Row(
-      //   crossAxisAlignment: CrossAxisAlignment.stretch,
-      //   children: [
-      //     Container(
-      //       color: Colors.grey.shade600,
-      //       width: 270,
-      //       height: 600,
-      //       child: ListView(
-      //         children: [
-      //           Texto.textoBarraLateral(),
-      //           Botao.botaoBarraLateral(
-      //             clique: () {},
-      //             texto: 'Exemplo 1',
-      //           ),
-      //           Botao.botaoBarraLateral(
-      //             clique: () {},
-      //             texto: 'Exemplo 1',
-      //           ),
-      //           Botao.botaoBarraLateral(
-      //             clique: () {},
-      //             texto: 'Exemplo 1',
-      //           ),
-      //           Botao.botaoBarraLateral(
-      //             clique: () {},
-      //             texto: 'Exemplo 1',
-      //           ),
-      //           Botao.botaoBarraLateral(
-      //             clique: () {},
-      //             texto: 'Exemplo 1',
-      //           ),
-      //           Botao.botaoBarraLateral(
-      //             clique: () {},
-      //             texto: 'Exemplo 1',
-      //           ),
-      //           Botao.botaoBarraLateral(
-      //             clique: () {},
-      //             texto: 'Exemplo 1',
-      //           ),
-      //         ],
-      //       ),
-      //     ),
-      //     Column(
-      //       crossAxisAlignment: CrossAxisAlignment.stretch,
-      //       mainAxisAlignment: MainAxisAlignment.center,
-      //       children: [
-      //         Row(
-      //           mainAxisAlignment: MainAxisAlignment.end,
-      //           children: [Texto.textoCorpo()],
-      //         ),
-      //       ],
-      //     ),
-      //   ],
-      // ),
     );
   }
 }
