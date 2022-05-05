@@ -29,8 +29,17 @@ class _HomePageState extends State<HomePage> {
             padding: const EdgeInsets.all(4.0),
             child: Row(
               children: [
-                Imagem.logo(imagem: 'images/Logo_icone.png'),
-                Texto.textoNavBar(),
+                Container(
+                  width: screenSize.width / 7,
+                  padding: EdgeInsets.all(4),
+                  color: Colors.lightBlue.shade900,
+                  child: Row(
+                    children: [
+                      Imagem.logo(imagem: 'images/Logo_icone.png'),
+                      Texto.textoNavBar(),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),

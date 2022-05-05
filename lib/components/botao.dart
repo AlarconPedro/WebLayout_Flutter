@@ -26,4 +26,16 @@ class Botao {
       ),
     );
   }
+
+  static Widget botaoLogin({String? botaoText, VoidCallback? onClick}) {
+    return ElevatedButton(
+      onPressed: onClick,
+      child: Text(
+        botaoText!,
+      ),
+      style: ElevatedButton.styleFrom(
+        onPrimary: Colors.black,
+      ),
+    );
+  }
 }

@@ -58,4 +58,8 @@ class Texto {
       ),
     );
   }
+
+  static Widget usuarioLogin() {
+    return const TextField();
+  }
 }
