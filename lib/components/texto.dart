@@ -8,10 +8,44 @@ class Texto {
     );
   }
 
-  static Widget login() {
-    return const ExpansionTile(
-      title: Text('Teste'),
-      backgroundColor: Colors.black,
+  static Widget login({
+    TextEditingController? controlador,
+    String? texto,
+    bool senha = false,
+    IconData? icone,
+  }) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 35, vertical: 12),
+      child: TextField(
+        controller: controlador,
+        style: const TextStyle(
+          color: Colors.white,
+        ),
+        obscureText: senha,
+        decoration: InputDecoration(
+          border: const OutlineInputBorder(),
+          hintStyle: const TextStyle(
+            color: Colors.white,
+          ),
+          hintText: texto,
+          prefixIcon: Icon(
+            icone,
+            color: Colors.white,
+          ),
+          focusedBorder: const OutlineInputBorder(
+            borderSide: BorderSide(
+              width: 2,
+              color: Colors.white,
+            ),
+          ),
+          enabledBorder: const OutlineInputBorder(
+            borderSide: BorderSide(
+              color: Colors.white,
+              width: 2,
+            ),
+          ),
+        ),
+      ),
     );
   }
 

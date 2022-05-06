@@ -2,6 +2,7 @@ import 'dart:html';
 
 import 'package:web_layout/components/components.dart';
 import 'package:flutter/material.dart';
+import 'package:web_layout/pages/login_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -31,7 +32,7 @@ class _HomePageState extends State<HomePage> {
               children: [
                 Container(
                   width: screenSize.width / 7,
-                  padding: EdgeInsets.all(4),
+                  padding: const EdgeInsets.all(4),
                   color: Colors.lightBlue.shade900,
                   child: Row(
                     children: [
@@ -44,7 +45,14 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           Botao.botaoNav(
-            clique: () {},
+            clique: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const LoginPage(),
+                ),
+              );
+            },
             texto: 'Login',
           ),
         ],
